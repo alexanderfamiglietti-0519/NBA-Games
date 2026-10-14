@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Gridiron Arena - All-Star Roster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Impact&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="theme-hardwood">
+
+  <!-- Shared Navigation Menu -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <div class="nfl-logo-badge">🏀 NBA</div>
+      <span class="site-title">CENTER COURT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="games.html" class="nav-link">Arcade Games</a></li>
+      <li><a href="roster.html" class="nav-link active">All-Star Roster</a></li>
+    </ul>
+    <button id="btn-theme-toggle" class="btn-secondary">💡 Night Mode</button>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>🌟 ALL-STAR LEGENDS & STATS</h1>
+    <p>Discover the greatest scorers in NBA history and preview legendary player spotlights.</p>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Ordered List Requirement -->
+    <section class="content-card">
+      <h2>📊 All-Time NBA Scoring Leaders</h2>
+      <p>Here are the top 5 highest scorers in NBA league history:</p>
+      <ol class="styled-list ordered">
+        <li><strong>LeBron James</strong> - 40,000+ Total Career Points</li>
+        <li><strong>Kareem Abdul-Jabbar</strong> - 38,387 Total Career Points</li>
+        <li><strong>Karl Malone</strong> - 36,928 Total Career Points</li>
+        <li><strong>Kobe Bryant</strong> - 33,643 Total Career Points</li>
+        <li><strong>Michael Jordan</strong> - 32,292 Total Career Points</li>
+      </ol>
+    </section>
+
+    <!-- Player Showcase Cards -->
+    <section class="content-card">
+      <h2>⭐ Featured Player Spotlight</h2>
+      <div class="roster-grid">
+
+        <!-- Player Card 1 -->
+        <article class="player-card">
+          <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=80" alt="Basketball Player Dunking" class="player-img">
+          <div class="player-info">
+            <h3>LeBron James</h3>
+            <p class="player-role">Forward | LA Lakers</p>
+            <p>4x NBA Champion, 4x Finals MVP, and the all-time leading scorer in NBA history.</p>
+            <button class="btn-secondary btn-card-modal">View Highlights</button>
+          </div>
+        </article>
+
+        <!-- Player Card 2 -->
+        <article class="player-card">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Stephen Curry Shooting" class="player-img">
+          <div class="player-info">
+            <h3>Stephen Curry</h3>
+            <p class="player-role">Guard | Golden State Warriors</p>
+            <p>4x NBA Champion, 2x MVP, universally recognized as the greatest shooter of all time.</p>
+            <button class="btn-secondary btn-card-modal">View Highlights</button>
+          </div>
+        </article>
+
+        <!-- Player Card 3 -->
+        <article class="player-card">
+          <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&w=600&q=80" alt="Giannis Antetokounmpo" class="player-img">
+          <div class="player-info">
+            <h3>Giannis Antetokounmpo</h3>
+            <p class="player-role">Forward | Milwaukee Bucks</p>
+            <p>2x NBA MVP, 2021 NBA Champion, and one of the most dominant two-way forces in basketball.</p>
+            <button class="btn-secondary btn-card-modal">View Highlights</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 NBA Center Court Project. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+</body>
+</html>
