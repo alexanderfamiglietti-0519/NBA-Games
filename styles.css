@@ -1,0 +1,440 @@
+/* ==========================================================================
+   NBA Center Court Theme - styles.css
+   Theme: Navy Blue, Hardwood Amber, Electric Orange & Crisp White
+   ========================================================================== */
+
+:root {
+  --bg-primary: #0a0e17;
+  --bg-card: #111827;
+  --bg-card-hover: #1f2937;
+  --color-primary: #1d428a;
+  --color-accent: #ff6b00;
+  --color-neon-cyan: #00f0ff;
+  --color-white: #ffffff;
+  --color-text: #e5e7eb;
+  --color-text-muted: #9ca3af;
+  --color-gold: #f59e0b;
+  --color-wood: #2a1810;
+  
+  --font-heading: 'Impact', 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', 'Segoe UI', sans-serif;
+  
+  --shadow-glow: 0 0 20px rgba(255, 107, 0, 0.4);
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Night Mode Theme Override */
+body.theme-dark {
+  --bg-primary: #030712;
+  --bg-card: #0b0f19;
+  --color-accent: #00f0ff;
+  --shadow-glow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(29, 66, 138, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 90% 50%, rgba(255, 107, 0, 0.15) 0%, transparent 40%);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+/* --------------------------------------------------------------------------
+   Navigation Menu (Appears on every page)
+   -------------------------------------------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--color-accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nfl-logo-badge {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(29, 66, 138, 0.8);
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: var(--color-white);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--color-text);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: var(--shadow-glow);
+}
+
+/* --------------------------------------------------------------------------
+   Hero & Page Headers
+   -------------------------------------------------------------------------- */
+.hero-banner {
+  background: linear-gradient(135deg, rgba(29, 66, 138, 0.8), rgba(10, 14, 23, 0.9)),
+              url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1200&q=80') center/cover;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--color-white);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  padding: 3rem 1.5rem 1rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+/* --------------------------------------------------------------------------
+   Layout Cards & Content
+   -------------------------------------------------------------------------- */
+.main-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.content-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.5rem;
+}
+
+.featured-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.styled-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.styled-list li {
+  margin-bottom: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   Arcade Mini-Games Styling
+   -------------------------------------------------------------------------- */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.game-stats {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-weight: bold;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Game 1: Free Throw Court */
+.ft-court-container {
+  position: relative;
+  height: 280px;
+  background: radial-gradient(circle at 50% 30%, #3a2010 0%, #1a0d05 100%);
+  border: 4px solid var(--color-gold);
+  border-radius: 10px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.hoop-container {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backboard {
+  width: 80px;
+  height: 50px;
+  border: 4px solid var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.rim {
+  width: 36px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 4px;
+  margin-top: -10px;
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+.basketball {
+  font-size: 2.5rem;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+}
+
+.meter-container {
+  position: relative;
+  width: 85%;
+  height: 20px;
+  background: rgba(0,0,0,0.8);
+  border: 2px solid var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.target-zone {
+  position: absolute;
+  left: 40%;
+  width: 20%;
+  height: 100%;
+  background: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+.aim-needle {
+  position: absolute;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+/* Game 2: 3-Point Arena */
+.tp-court-container {
+  position: relative;
+  height: 260px;
+  background: radial-gradient(circle at 50% 100%, #1d428a 0%, #0a0e17 80%);
+  border: 4px solid var(--color-white);
+  border-radius: 10px;
+  margin-top: 1rem;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.target-hoop {
+  position: absolute;
+  font-size: 2.5rem;
+  display: none;
+  user-select: none;
+}
+
+.arena-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Roster Grid & Player Cards
+   -------------------------------------------------------------------------- */
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.player-card {
+  background: var(--bg-card-hover);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: var(--transition);
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.player-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.player-info {
+  padding: 1.2rem;
+}
+
+.player-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+.player-role {
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Controls
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  padding: 0.75rem 1.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+}
+
+.btn-game {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  background: #060911;
+  border-top: 2px solid var(--color-accent);
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; gap: 1rem; }
+  .main-heading { font-size: 2rem; }
+}
