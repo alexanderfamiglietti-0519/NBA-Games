@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Gridiron Arena - Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Impact&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="theme-hardwood">
+
+  <!-- Shared Navigation Menu -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <div class="nfl-logo-badge">🏀 NBA</div>
+      <span class="site-title">CENTER COURT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="games.html" class="nav-link active">Arcade Games</a></li>
+      <li><a href="roster.html" class="nav-link">All-Star Roster</a></li>
+    </ul>
+    <button id="btn-theme-toggle" class="btn-secondary">💡 Night Mode</button>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>🏀 NBA ARCADE MINI-GAMES</h1>
+    <p>Test your precision and reaction timing with two interactive basketball challenges!</p>
+  </header>
+
+  <main class="main-container">
+
+    <!-- MINI-GAME 1: FREE THROW SHOOTOUT -->
+    <section class="content-card game-card">
+      <div class="game-header">
+        <h2>🎯 GAME 1: FREE THROW SHOOTOUT</h2>
+        <div class="game-stats">
+          <span>Score: <strong id="ft-score">0</strong></span>
+          <span>Shots Left: <strong id="ft-shots">5</strong></span>
+        </div>
+      </div>
+      <p>Time your release! Click <strong>"SHOOT FREE THROW"</strong> when the red needle is inside the blue target zone to swish the basket.</p>
+
+      <div class="ft-court-container">
+        <!-- Basketball Backboard & Hoop -->
+        <div class="hoop-container">
+          <div class="backboard"></div>
+          <div class="rim"></div>
+          <div class="net"></div>
+        </div>
+
+        <!-- Basketball -->
+        <div class="basketball" id="ft-ball">🏀</div>
+
+        <!-- Aiming Meter -->
+        <div class="meter-container">
+          <div class="target-zone"></div>
+          <div class="aim-needle" id="ft-needle"></div>
+        </div>
+
+        <button id="btn-shoot-ft" class="btn-primary btn-game">SHOOT FREE THROW</button>
+      </div>
+    </section>
+
+    <!-- MINI-GAME 2: 3-POINT RAPID FIRE -->
+    <section class="content-card game-card">
+      <div class="game-header">
+        <h2>⚡ GAME 2: 3-POINT RAPID FIRE</h2>
+        <div class="game-stats">
+          <span>Points: <strong id="tp-score">0</strong></span>
+          <span>Timer: <strong id="tp-timer">15s</strong></span>
+        </div>
+      </div>
+      <p>Click or tap the moving basketball targets around the 3-point line before time runs out!</p>
+
+      <div class="tp-court-container" id="tp-arena">
+        <div class="target-hoop" id="tp-target">🏀</div>
+        <div class="arena-message" id="tp-msg">Click 'START 3-POINT CONTEST' to begin!</div>
+      </div>
+
+      <button id="btn-start-tp" class="btn-primary btn-game">START 3-POINT CONTEST</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 NBA Center Court Project. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+</body>
+</html>
